@@ -45,8 +45,8 @@ ListItems();
 window.onscroll = function() {
   document.querySelectorAll("section").forEach(function(active){
     if (
-      active.getBoundingClientRect().top >= -400 &&
-      active.getBoundingClientRect().top <= 150 
+      active.getBoundingClientRect().top >= -398 &&
+      active.getBoundingClientRect().top <= 148 
       ) {
         // add the active class
          active.classList.add("your-active-class");
