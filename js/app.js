@@ -64,9 +64,7 @@ window.onscroll = function() {
 navBarList.addEventListener("click", (toSection) => {
   toSection.preventDefault();
   if (toSection.target.dataset.nav){
-    document
-    .getElementById(`${toSection.target.dataset.nav}`)
-    .scrollIntoView({ behaviour: "smooth"});
+    document.getElementById(`${toSection.target.dataset.nav}`.scrollIntoView({ behaviour: "smooth"});
     
   }
 });
