@@ -43,31 +43,33 @@ ListItems();
 // Add class 'active' to section when near top of viewport
 //GetBoundingClientRect
 window.onscroll = function() {
-  document.querySelectorAll("section").forEach(function(active){
-    if (
-      active.getBoundingClientRect().top >= -400 &&
-      active.getBoundingClientRect().top <= 150 
-      ) {
-        // add the active class
-         active.classList.add("your-active-class");
-        active.style.cssText="background-color:green";
-         } else {
-           // remove the active class
-         active.classList.remove("your-active-class");
-         active.style.cssText="background-color:linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);";
-  }
+  sections.forEach(function(section) {
+    const rect = section.getBoundingClientRect();
+    if (rect.top >= -400 && rect.top <= 150) {
+      // Add the active class
+      section.classList.add("your-active-class");
+      section.style.backgroundColor = "green";
+    } else {
+      // Remove the active class
+      section.classList.remove("your-active-class");
+      section.style.backgroundColor = "transparent";
+    }
+  });
+
+  // Highlight active section in the Navbar
+  const activeSectionId = sections.find(section => section.classList.contains("your-active-class")).id;
+  const navLinks = document.querySelectorAll(".menu__link");
+  navLinks.forEach(link => {
+    link.classList.toggle("active", link.dataset.nav === activeSectionId);
   });
 };
 
-// When clicking an item from the navigation menu the link should scroll to the appropriate section 
-
-navBarList.addEventListener("click", (toSection) => {
-  toSection.preventDefault();
-  if (toSection.target.dataset.nav){
-    document
-    .getElementById(`${toSection.target.dataset.nav}`)
-    .scrollIntoView({ behaviour: "smooth"});
-    
+// When clicking an item from the navigation menu, the link should scroll to the appropriate section
+navBarList.addEventListener("click", function(event) {
+  event.preventDefault();
+  const targetId = event.target.dataset.nav;
+  const targetSection = document.getElementById(targetId);
+  if (targetSection) {
+    targetSection.scrollIntoView({ behavior: "smooth" });
   }
 });
- 
