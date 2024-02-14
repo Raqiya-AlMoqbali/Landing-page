@@ -1,8 +1,6 @@
 
 # Landing Page
 
-Welcome to the Landing Page repository. This repository contains a simple landing page template designed to showcase a product, service, or project in a visually appealing manner.
-
 ## Introduction
 This project build a multi-section landing page, with a dynamically updating navigational menu based on the amount of content that is added to the page. To improve the user experience, the section actively being viewed should be differentiated in some way. Additionally, when a user clicks on a navigation item, the item should scroll you to the appropriate section rather than giving you the default jump.
 
