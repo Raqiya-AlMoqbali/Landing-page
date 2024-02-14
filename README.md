@@ -11,8 +11,7 @@ This project build a multi-section landing page, with a dynamically updating nav
 - **Easy Customization:** The template is easy to customize, allowing you to modify the content, colors, and layout to suit your specific needs.
 - **Minimalistic Design:** With a clean and minimalistic design, the landing page focuses on presenting key information effectively without unnecessary distractions.
 - **HTML/CSS:** The landing page is built using HTML and CSS, making it lightweight and easy to understand for developers of all levels.
-- **Social Media Integration:** Includes links to social media profiles or relevant external resources to enhance user engagement.
-- 
+
 ## Languages:
 In this project I use HTML + CSS + JavaScript
 
