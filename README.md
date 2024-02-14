@@ -1,6 +1,6 @@
-# Landing-page
-# The General Text
-this is the landing page (project 2 - Front End Nanodegree program) README
+
+# Landing Page Project
+This is a simple landing page project featuring a navigation bar, main content sections, and a footer.
 
 # Starter Code:
 https://github.com/udacity/fend/tree/refresh-2019/projects/landing-page
